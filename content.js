@@ -9,24 +9,9 @@ list.forEach(l => {
 })
 
 console.log(email_elements[0])
-console.log("Email elements: ", email_elements);
+console.log("hi Email elements: ", email_elements[0]);
 
+for(element of email_elements){
+    console.log("Element: ", element)
+}
 
-// let email_elements_array = Array.from(email_elements)
-// console.log("email elem array:", email_elements_array)
-// email_elements_array.forEach(element => {
-//     console.log("Email element: ", element)
-// })
-
-// for (let i of email_elements) {
-//     console.log(i);
-// }
-
-// email_elements.forEach(element => {
-//     console.log(element.innerText);
-// });
-
-
-// foreach(e : email_elements){
-//     console.log(e.innerText);
-// }    
