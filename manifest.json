@@ -1,14 +1,16 @@
 {
-    "manifest_version": 3,
-    "name": "Bot Extension",
-    "short_name": "botx",
-    "version": "1.0",
-    "icons": {
-
-    },
-    "action": {
+  "manifest_version": 3,
+  "name": "Test_Bot",
+  "version": "1.0",
+  "icons": {
+    "16": "images/copy.png",
+    "32": "images/robot.png",
+    "48": "images/send.png",
+    "128": "images/user.png"
+  },
+  "action": {
       "default_popup": "popup.html"
-    },
+  },
     "description": "A minimal extension which demonstrates how to create a extension with Gmail.JS and NodeJS-based bundling.",
 
     "content_scripts": [

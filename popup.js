@@ -1,25 +1,30 @@
-let scrapeEmails = document.getElementById("scrapeEmails")
+let chat_window = document.getElementById("chat_container")
 
-scrapeEmails.addEventListener("click", async () => {
-    console.log("in event listener")
-    // get curr active tab
+let message = document.createElement("div");
+message.className = "user_message";
+message.innerHTML = `
+        <div><img src="images/user.png" width="36px" height="36px"></div>
+        <div class="wrapper">
+            <div class="message_content"><span>This is a text message. I a tryng to figure out how the content fits here. I hope this looks good.This is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks goodThis is a text message. I a tryng to figure out how the content fits here. I hope this looks good</span></div>
+            <div class="copy_container"><img src="images/copy.png" width="16px" height="20px"></div>
+        </div>
+`
 
-    let [tab] = await chrome.tabs.query({active: true, currentWindow: true});
+let message2 = document.createElement("div");
+message2.className = "bot_message";
+message2.innerHTML = `
+        <div><img src="images/robot.png" width="36px" height="36px"></div>
+        <div class="wrapper">
+            <div class="message_content"><span>Ask follow-ups to know more</span></div>
+            <div class="copy_container"><img src="images/copy.png" width="16px" height="20px"></div>
+        </div>
+`
+let message3 = document.createElement("div");
+message3.className = "loading_message";
+message3.innerHTML = `
+        <div class="loading_message"><span>Loading...</span></div>
+`
 
-    // execute script to parse emails on page
-    chrome.scripting.executeScript({
-        target: {tabId: tab.id},
-        func: scrapeEmailsFromPage, 
-    });
-})
-
-// function to scrape emails
-function scrapeEmailsFromPage(){
-    console.log("In scrape emails function")
-    email_elements = document.getElementsByClassName("aHU hx")
-    console.log("EMAIL ELE: ", email_elements[0].children)
-
-    for(element of email_elements[0].children){
-        console.log("Child: ", element.innerText)
-    }
-}
+chat_window.appendChild(message)
+chat_window.appendChild(message2)
+chat_window.appendChild(message3)
