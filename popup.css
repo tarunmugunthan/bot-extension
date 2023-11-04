@@ -1,24 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 body {
-    width: 20rem;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding-inline-start: 0;
-    margin: 1rem 0;
-  }
-  
-  li {
-    padding: 0.25rem;
-  }
-  li:nth-child(odd) {
-    background: #80808030;
-  }
-  li:nth-child(even) {
-    background: #ffffff;
-  }
-  
-  h3,
-  p {
-    margin: 0;
-  }
+    width: 500px;
+    height: 700px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(43, 43, 43);
+    margin: 0px;
+    padding: 0px;
+}
+
+.user_message {
+  padding: 20px 20px;
+  background-color:#FFFFFF;
+  display: flex;
+  flex-direction: row;
+}
+
+.bot_message {
+  padding: 20px 20px;
+  background-color:#E8F5FF;
+  display: flex;
+  flex-direction: row;
+}
+
+#chat_container {
+  padding-bottom: 80px;
+  padding-top: 60px;
+}
+
+#head {
+  position: fixed;
+  top: 0px;
+  padding: 0px 20px 20px 20px;
+  background-color: #4278E1;
+  color: white;
+  width: 100%;
+  height: 40px;
+}
+
+/* .message_content {
+  margin-left: 20px;
+} */
+
+.copy_container {
+  padding-left: 20px;
+  margin-right: 10px;
+}
+
+#prompt_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  bottom: 0px;
+  background-color: #e7ebf0;
+  padding: 10px 20px;
+}
+
+#send_button {
+  margin-left: 10px;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 21px;
+  margin-left: 20px;
+  width: 100%;
+}
+
+#prompt_box{
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  resize: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.loading_message {
+  background-color: #ffffff;
+  padding: 10px 10px;
+  color: rgb(168, 168, 168);
+}
