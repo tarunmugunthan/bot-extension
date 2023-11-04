@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <template id="li_template">
-      <li>
-        <a>
-          <h3 class="title">Tab Title</h3>
-          <p class="pathname">Tab Pathname</p>
-        </a>
-      </li>
-    </template>
-
-    <h1>Google Dev Docs</h1>
-    <h2> abhsjcbdw</h2>
-    <button>Get Email Content</button>
-    <ul></ul>
-
+    <div id="head">
+      <h1>Helper Bot</h1>
+    </div>
+    <div id="chat_container">
+      <!-- <div class="message">
+        <div><img src="images/icon-32.png"></div>
+        <div class="message_content"><span>This is a text message</span></div>
+        <div class="copy_container"><img src="images/icon-16.png"></div>
+      </div> -->
+    </div>
+    <div id="prompt_container">
+      <textarea id="prompt_box">Ask follow-ups here</textarea>
+      <div id="send_button"><img src="images/send.png" width="44px" height="44px"></div>
+    </div>
     <script src="popup.js" type="module"></script>
   </body>
 </html>

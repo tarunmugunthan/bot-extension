@@ -1,6 +1,6 @@
 console.log("hi")
 
-email_elements = document.getElementsByClassName("iA g6")
+email_elements = document.getElementsByClassName("adn ads")
 
 const list = [1, 2, 3]
 
