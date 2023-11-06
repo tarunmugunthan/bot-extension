@@ -21,14 +21,15 @@
     });
   }
   function onViewEmail(domEmail) {
-    console.log("Looking at email:", domEmail);
     const emailData = gmail.new.get.email_data(domEmail);
-    console.log("Email data:", emailData.email_content);
-    const emailRec = getEmail("ABC");
+    console.log("Email data:", emailData);
+    const emailRec = getEmail(emailData.content_html);
   }
-  function getEmail(email) {
-    fetch("http://127.0.0.1:8000/respond").then((response) => response.json()).then((data) => {
-      console.log("Data: ", data);
+  function getEmail(contentHtml) {
+    console.log("getting response from llm");
+    const user_question_encoded = encodeURIComponent(contentHtml);
+    fetch("http://127.0.0.1:8000/process?data_request=" + user_question_encoded).then((response) => response.json()).then((data) => {
+      console.log("Data: ", data.response);
     }).catch((error) => {
       console.error("Fetch Error:", error);
     });

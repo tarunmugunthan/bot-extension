@@ -8,16 +8,20 @@
     "48": "images/send.png",
     "128": "images/user.png"
   },
+  "externally_connectable": {
+    "ids": ["*"],
+    "matches": ["*://*/*"],
+    "accepts_tls_channel_id": false
+    },
   "action": {
       "default_popup": "popup.html"
   },
     "description": "A minimal extension which demonstrates how to create a extension with Gmail.JS and NodeJS-based bundling.",
-
     "content_scripts": [
         {
             "matches": [ "*://mail.google.com/*" ],
             "js": [
-                "src/extensionInjector.js"
+                "src/extensionInjector.js", "src/extension.js"
             ],
             "run_at": "document_start"
         }
